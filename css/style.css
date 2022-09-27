@@ -1,0 +1,149 @@
+:root{
+    --main--color:#d0820d;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*start settings box*/
+.setting-box {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    z-index: 1000;
+    background-color: #fff;
+    min-height: 100vh;
+    transition: .3s;
+}
+.setting-box.open{
+    left: 0;
+}
+
+.setting-box .toggle-setting {
+    position: absolute;
+    top: 50px;
+    right: -30px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.setting-box .toggle-setting .fa-cog {
+padding: 8px 4px;
+width: 30px;
+}
+
+.setting-box .options-box{
+    padding: 20px;
+}
+.setting-box .options-box h4{
+    text-align: center;
+    color: #666;
+
+}
+.setting-box  .options-box .colors-list{
+    list-style: none;
+}
+.setting-box  .options-box .colors-list li{
+    background-color: black;
+    opacity: .5;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.setting-box  .options-box .colors-list li.active{
+    opacity: 1;
+
+}
+.setting-box .options-box .colors-list li:first-child{
+    background-color: var(--main--color);
+}
+.setting-box .options-box .colors-list li:nth-child(2){
+    background-color: cornflowerblue;
+}
+.setting-box .options-box .colors-list li:nth-child(3){
+    background-color:crimson;
+}
+.setting-box .options-box .colors-list li:nth-child(4){
+    background-color:darkseagreen;
+}
+.setting-box .options-box .colors-list li:nth-child(5){
+    background-color:rgb(6, 199, 199);
+}
+/*end settings box*/
+/*start landing page*/
+.landing-page{
+    min-height: 100vh;  /*عشان لو فيه محتوي اكتر الصفحة تكمل معايا*/
+    background-image: url('../images/1.jpg');
+    background-size: cover;
+    position: relative;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.53);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.header{
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    padding: 10px;
+}
+.header .logo{
+    width: 300px;
+    padding: 15px;
+}
+.header .links {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 10px;
+    font-size: 15px;
+}
+.header .links li{
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.header .links li a{
+    color: white;
+    text-decoration: none;
+}
+.header .links li a:hover,
+.header .links li a.active{
+    text-decoration: none;
+    color: var(--main--color);
+    transition: .2s;
+}
+.introduction-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    color: white;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+.introduction-text h1{
+    font-size: 37px;
+}
+.introduction-text h1 span{
+    color: var(--main--color);
+    margin: 0 0 12;
+}
+.introduction-text p{
+   line-height: 2;
+   font-size: 20px;
+   margin: 0;
+}
+/*end landing page */
